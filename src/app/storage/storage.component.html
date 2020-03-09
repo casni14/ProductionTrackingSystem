@@ -1,0 +1,28 @@
+<div class=searchSegment>
+    <h1>Storage Overview</h1> <br>
+
+    <h2>Register Components</h2>
+    <form>
+        <label class="w3-label">Barcode:</label><br>
+        <input class="w3-input" #barcode type="text" name="customerName"><br>
+        <label class="w3-label">Type Id:</label><br>
+        <input class="w3-input" #typeId  type="number" name="sapId"><br>
+        <input class="w3-button" type="submit" (click)="onSubmit(name, sapId)">
+    </form> <br>
+    <label class="w3-label">From</label> 
+    <input [(ngModel)]="startDate" (change)="onChange()" class="w3-input" type="date"><br>
+    <label class="w3-label">To</label> 
+    <input [(ngModel)]="endDate"  (change)="onChange()" class="w3-input" type="date">    
+</div> <br>
+
+<table class="w3-table w3-striped"> 
+    <tr>
+        <th>Id</th>
+        <th>Barcode</th>
+    </tr>
+    <tr *ngFor="let component of components; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+        <td>{{component.id}}</td>
+        <td>{{component.barcode}}</td>
+        <td><button (click)="updateTables(i)"><i class="material-icons md-18">delete</i></button></td>
+    </tr>
+</table>

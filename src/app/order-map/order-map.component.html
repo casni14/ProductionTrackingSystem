@@ -1,0 +1,20 @@
+
+<div class="innerBody">
+  <h1>{{ title }}</h1>
+
+  <h3>Add search parameters</h3>
+  <span>  
+  <tag-input [(ngModel)]="searchParams">
+      <tag-input-dropdown [autocompleteItems]="autocompleteItems"></tag-input-dropdown>  
+  </tag-input> <br> 
+  <button class="w3-button" (click)="sortIntersections(searchParams)">Search</button> 
+  </span>
+</div> <br>
+  <agm-map class="map" [latitude]="55.395833" [longitude]="10.388611">
+    <ng-container *ngFor="let intersection of intersections">
+      
+      <agm-marker [latitude]=intersection.latitude [longitude]=intersection.longitude></agm-marker>
+    </ng-container>
+  </agm-map>
+
+ 

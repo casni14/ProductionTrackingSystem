@@ -1,0 +1,33 @@
+<div class="orderView"> 
+  <h1>Order Overview</h1> <br> 
+
+
+  <label class="w3-label">From</label> 
+  <input [(ngModel)]="startDate" (change)="onChange()" class="w3-input" type="date"><br>
+  <label class="w3-label">To</label> 
+  <input [(ngModel)]="endDate"  (change)="onChange()" class="w3-input" type="date"> 
+
+
+</div><br>
+
+
+
+
+  <table class="w3-table w3-striped">
+    <tr>
+      <th>OrderId</th>
+      <th>ClientName</th>
+      <th>Components</th>
+      <th>Status</th>
+    </tr>
+      <tr *ngFor="let order of orders; let i = index">
+          <td>{{order.sapId}}</td>
+          <td>{{order.client.name}}</td>
+          <td>{{order.componentCount}}</td>
+          <td>{{order.status}}</td>  
+        <td><button (click)="updateTables(i)"><i class="material-icons md-18">delete</i></button></td>
+      </tr>
+  </table>
+
+
+<!--[(ngModel)]="endDate"-->

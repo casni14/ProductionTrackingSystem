@@ -1,0 +1,17 @@
+.sebm-google-map-container {
+  height: 800px;
+}
+
+.innerBody{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.map{
+  width: auto
+}
+
+.w3-button{
+  background-color: #E9800C;
+  color: white;
+}

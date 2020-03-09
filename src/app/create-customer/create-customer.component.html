@@ -1,0 +1,26 @@
+<div class="custForm">
+    <form>
+        <label class="w3-label">Name:</label><br>
+        <input class="w3-input" #name type="text" name="customerName"><br>
+        <label class="w3-label">SapId:</label><br>
+        <input class="w3-input" #sapId  type="number" name="sapId"><br>
+        <input class="w3-button" type="submit" (click)="onSubmit(name.value, sapId.value)">
+    </form> <br>
+    <button class="w3-button" (click)="updateCustomers(10)">Update customers</button>
+</div>
+
+
+    <table class="w3-table w3-striped">
+        <tr>
+            <th>Id</th>
+            <th>Sap id</th>
+            <th>Name</th>
+        </tr>
+        <tr *ngFor="let customer of customers; let i = index">
+            <td>{{customer.id}}</td>
+            <td><input id=i class="input" [(ngModel)]="customer.sapId" (change)="updateCustomers(i)" type="number" value={{customer.sapId}}></td>
+            <td><input class="input" [(ngModel)]="customer.name" (change)="updateCustomers(i)"  type="text" value={{customer.name}}></td>
+            <td><button (click)="updateTables(i)"><i class="material-icons md-18">delete</i></button></td>
+        </tr>
+    </table>
+    

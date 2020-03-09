@@ -1,0 +1,10 @@
+.searchSegment{
+    margin-left: 20px
+}
+
+.material-icons.md-18 { font-size: 18px; }
+
+.w3-table tr.active td{
+    background-color: #E9800C !important;;
+    color: white;
+}

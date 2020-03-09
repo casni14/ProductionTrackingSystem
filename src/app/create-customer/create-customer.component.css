@@ -1,0 +1,18 @@
+.custForm{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.w3-label {
+    color: #00579A
+}
+
+.input{
+    background: transparent;
+    border: none;
+}
+
+.w3-button {
+    background-color: #E9800C;
+    color: white;
+}

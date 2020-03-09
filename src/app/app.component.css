@@ -1,0 +1,21 @@
+.header.w3-container.w3-teal{
+    background-color: #E9800C; 
+}
+
+.w3-container{
+    color: #E9800C;
+}
+
+.w3-opennav{
+    color: white;
+}
+
+.w3-sidebar{
+    color: white;
+    background-color: #00579A;
+    width:auto
+}
+
+a{
+   text-decoration: none; 
+}

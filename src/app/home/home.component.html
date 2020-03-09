@@ -1,0 +1,69 @@
+<div id="container">
+  <div class="row">
+    <div class="box">
+      <h3>Orders placed in the last 8 months</h3> <br>
+      <div style="display: block;">
+        <canvas baseChart width="300" height="200"
+          [data]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [chartType]="lineChartType"
+          [legend]="lineChartLegend"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Orders by customers in the last 8 months</h3>  <br>
+      <div style="display: block;">
+        <canvas baseChart width="300" height="200"
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [chartType]="barChartType"
+          [options]="barChartOptions"
+          [legend]="lineChartLegend"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="box">
+      <h3>Active orders</h3>  <br>
+      <div style="display: block;">
+        <canvas baseChart baseChart width="300" height="200"
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <
+    <div class="box">
+      <h3>Top sold components in the last 8 months</h3>  <br>
+      <div style="display: block;">
+      <canvas baseChart width="300" height="200"
+          [datasets]="componentsChartData"
+          [labels]="componentsChartLabels"
+          [chartType]="barChartType"
+          [options]="barChartOptions"
+          [legend]="lineChartLegend"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--<div class="col-md-6" style="margin-bottom: 10px">
+    <table class="table table-responsive table-condensed">
+      <tr>
+        <th *ngFor="let label of lineChartLabels">{{label}}</th>
+      </tr>
+      <tr *ngFor="let d of lineChartData">
+        <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+      </tr>
+    </table>
+  </div>
+  <button (click)="randomize()">CLICK</button>
+  -->
